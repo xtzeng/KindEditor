@@ -8,8 +8,6 @@
 	<constant name="struts.devMode" value="true" />
 	<constant name="struts.i18n.encoding" value="UTF-8" />
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
-	<constant name="struts.objectFactory.spring.autoWire" value="name" />
-	<constant name="struts.objectFactory" value="spring" />
 	<constant name="struts.enable.SlashesInActionNames" value="true" />
 	<constant name="struts.ui.theme" value="simple" />
 	<constant name="struts.multipart.maxSize" value="262144000" /><!-- 1024*1024*30 = 250M -->
@@ -30,6 +28,9 @@
         	<exception-mapping result="exception" exception="java.lang.Exception"/>
         </global-exception-mappings>
   -->
-		<action name="*.**" class="{1}Action" method="{2}" />
+		<!-- --> <action name="*.**" class="{1}Action" method="{2}" />
+		
 	</package>
+	
+	
 </struts>
