@@ -30,10 +30,8 @@
     <property name="validationQuery" value="select count(0) from admin" />  
 	</bean> 
 	
-	<bean id="sessionFactory"  
-    class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">  
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">  
     <property name="dataSource" ref="myDataSource">  
-    
     </property>  
     <property name="hibernateProperties">  
         <props>  
