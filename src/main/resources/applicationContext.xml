@@ -27,7 +27,7 @@
     <property name="maxActive" value="20" />  
     <property name="maxIdle" value="5" />  
     <property name="maxWait" value="5000" />  
-    <property name="validationQuery" value="select count(0) from admin" />  
+    <!-- <property name="validationQuery" value="select count(0) from admin" /> -->  
 	</bean> 
 	
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">  
