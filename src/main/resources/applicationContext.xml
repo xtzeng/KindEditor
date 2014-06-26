@@ -30,7 +30,7 @@
     <!-- <property name="validationQuery" value="select count(0) from admin" /> -->  
 	</bean> 
 	
-	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">  
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">  
     <property name="dataSource" ref="myDataSource">  
     </property>  
     <property name="hibernateProperties">  
@@ -38,14 +38,21 @@
             <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>  
             <prop key="hibernate.show_sql">true</prop>  
         </props>  
-    </property>  
+    </property> 
+    <!--   
     <property name="mappingDirectoryLocations">  
         <list>  
             <value>  
-                classpath:com/immutable/alias/pojos         
+                com/immutable/alias/pojos         
             </value>  
         </list>  
-    </property>  
+    </property> --> 
+    
+    <property name="annotatedClasses">             
+    	<list>                 
+    	<value>com.immutable.alias.pojos.User</value>                
+   		</list>         
+   	</property> 
 </bean> 
 	
 </beans>

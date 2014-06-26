@@ -1,30 +1,29 @@
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.immutable.alias.pojos.User;
+import com.immutable.alias.pojos.Student;
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:applicationContext.xml"})
-public class SpringHibernateTest {
+public class StudentTest {
 
-	@Test
-	public void testIntegrate() {
+	public void testSaveStudent() {
+		
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");		
 		SessionFactory sessionFactory = (SessionFactory) context.getBean("sessionFactory");
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		User user = new User();
-		user.setId(3);
-		user.setName("hello");
-		user.setPassword("123456");
-		session.save(user);
+		Student student = new Student();
+		student.setName("hello");
+		student.setSex("男");
+		session.save(student);
 		session.getTransaction().commit();
-		
 	}
+	
 }
