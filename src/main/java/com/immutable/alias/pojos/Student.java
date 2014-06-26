@@ -1,5 +1,7 @@
 package com.immutable.alias.pojos;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -9,7 +11,7 @@ public class Student {
 	private int id;
 	private String name;
 	private String sex;
-	
+	private Date lastUpdateTime;
 	
 	
 	public Student() {
@@ -34,6 +36,14 @@ public class Student {
 	}
 	public void setSex(String sex) {
 		this.sex = sex;
+	}
+
+	public Date getLastUpdateTime() {
+		return lastUpdateTime;
+	}
+
+	public void setLastUpdateTime(Date lastUpdateTime) {
+		this.lastUpdateTime = lastUpdateTime;
 	}
 	
 	

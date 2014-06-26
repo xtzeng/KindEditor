@@ -43,15 +43,20 @@
 	        </props>  
 	    </property> 
       
-      <property name="packagesToScan" value="com.immutable.alias.pojos.*"/>
-      
-	 <property name="annotatedScanPackages">             
+       <!-- 扫描包的方式 --> <property name="packagesToScan" value="com.immutable.alias.pojos."/> 
+     
+     <!-- 扫描注解类的方式 
+	 <property name="annotatedClasses">             
     	<list>                 
-    		<value>com.immutable.alias.pojos</value>                
+    		<value>com.immutable.alias.pojos.User</value>                
    		</list>         
    	</property> 
+   	 -->
    	 
-	    <!--
+   	 
+   	 
+   	 
+	    <!--使用配置文件的方式
 	  <property name="mappingResources">
     	<list>
    		 <value>com/immutable/alias/pojos/User.hbm.xml</value>

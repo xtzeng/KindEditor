@@ -1,3 +1,5 @@
+import java.util.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.Test;
@@ -23,6 +25,7 @@ public class SpringHibernateTest {
 		user.setId(3);
 		user.setName("hello");
 		user.setPassword("123456");
+		user.setLastUpdateTime(new Date());
 		session.save(user);
 		session.getTransaction().commit();
 		

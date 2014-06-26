@@ -1,5 +1,7 @@
 package com.immutable.alias.pojos;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +16,7 @@ public class User {
 	
 	private String name;
 	private String password;
-	
+	private Date lastUpdateTime;
 	
 	@Id @GeneratedValue
 	public int getId() {
@@ -36,6 +38,15 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	@Column(name="last_update_time")
+	public Date getLastUpdateTime() {
+		return lastUpdateTime;
+	}
+	public void setLastUpdateTime(Date lastUpdateTime) {
+		this.lastUpdateTime = lastUpdateTime;
+	}
+	
+	
 	
 	
 }
