@@ -22,7 +22,6 @@ public class SpringHibernateTest {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
 		User user = new User();
-		user.setId(3);
 		user.setName("hello");
 		user.setPassword("123456");
 		user.setLastUpdateTime(new Date());

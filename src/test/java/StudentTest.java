@@ -1,5 +1,8 @@
+import java.util.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -13,6 +16,7 @@ import com.immutable.alias.pojos.Student;
 @ContextConfiguration(locations={"classpath:applicationContext.xml"})
 public class StudentTest {
 
+	@Test
 	public void testSaveStudent() {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");		
@@ -22,6 +26,7 @@ public class StudentTest {
 		Student student = new Student();
 		student.setName("hello");
 		student.setSex("男");
+		student.setLastUpdateTime(new Date());
 		session.save(student);
 		session.getTransaction().commit();
 	}
