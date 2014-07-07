@@ -28,6 +28,10 @@ public class TestAction extends BaseAction{
 		return dispatch("/kindeditor/jsp/demo2.jsp");
 	}
 
+	public Result test() {
+		
+		return dispatch("/test.jsp");
+	}
 	
 	  public void addActionError(String anErrorMessage){
 		   String s = anErrorMessage;
